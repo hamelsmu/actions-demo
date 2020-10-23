@@ -1,0 +1,14 @@
+name: PR Comment
+on: issue_comment
+
+jobs:     
+  debug:
+
+    - name: see payload
+      run: echo "$PAYLOAD"
+      env:
+        PAYLOAD: ${{ toJSON(github.event) }}
+  comment:
+  
+    
+
